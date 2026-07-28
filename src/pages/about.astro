@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const title = "About";
 const description = "About the Embersong Devlog.";
 const permalink = `${Astro.site.href}about`;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -16,7 +17,7 @@ const permalink = `${Astro.site.href}about`;
     <h1>About</h1>
     <figure class="about-image">
       <img
-        src="/assets/about-illustration.webp"
+        src={`${baseUrl}assets/about-illustration.webp`}
         alt="Illustration of a notebook"
         width="330"
       />

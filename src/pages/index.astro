@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const title = "Embersong Devlog";
 const description = "A devlog for a multiplayer experiment.";
 const permalink = Astro.site.href;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
@@ -16,13 +17,13 @@ const permalink = Astro.site.href;
     <div class="hero-image-container">
       <picture>
         <source
-          srcset="/assets/home-illustration.webp"
+          srcset={`${baseUrl}assets/home-illustration.webp`}
           media="(min-width: 600px)"
         />
         <img
           class="hero-image"
           alt="Illustration of person reading a book"
-          src="/assets/home-illustration-small.webp"
+          src={`${baseUrl}assets/home-illustration-small.webp`}
           width="550"
           height="466"
         />
